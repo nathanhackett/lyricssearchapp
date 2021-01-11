@@ -7,7 +7,7 @@ const Track = (props) => {
         <div className="col-md-6">
             <div className="card mb-4 shadow-sm">
                 <div className="card-body">
-                    <h5>{track.track_name} {track.explicit === 0 ? '' : '[Explicit]'}</h5>
+                    <h4>{track.track_name} {track.explicit === 0 ? '' : '[Explicit]'}</h4>
                     <p className="card-text">
                         <strong>
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-play" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
