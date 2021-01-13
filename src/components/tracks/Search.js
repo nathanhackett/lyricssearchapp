@@ -38,7 +38,7 @@ class Search extends Component {
                             <h1 className="display-4 text-center">
                                 <i className="fas fa-music"></i> Search For A Song
                             </h1>
-                            <p className="lead text-center">Get The Lyrics For Any Song</p>
+                            <p className="lead text-center">View The Lyrics For Any Song</p>
                             <form onSubmit={this.findTrack.bind(this, dispatch)}>
                                 <div>
                                     <input type="text" className="form-control form-control-lg"
@@ -50,7 +50,7 @@ class Search extends Component {
                                 </div>
                                 <br />
                                 <button className = "btn btn-primary btn-lg mb-3" type = "submit">
-                                    Get Lyrics
+                                    Search
                                 </button>
                             </form>
                         </div>
