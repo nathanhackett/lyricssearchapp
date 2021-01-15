@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Consumer } from '../../context';
+import Spinner from '../layout/spinner' //loading symbol
+
 class Search extends Component {
     state = {
         trackTitle: ''
@@ -31,8 +33,11 @@ class Search extends Component {
         return (
             <Consumer>
                 {value => {
-                    const { dispatch } = value;
+                    const { dispatch, track_list } = value;
                     // console.log(value);
+                    if (track_list === undefined || track_list.length === 0) {
+                        return <Spinner />;
+                    } else {
                     return (
                         <div className="card card-body mb-4 p-4">
                             <h1 className="display-4 text-center">
@@ -54,7 +59,7 @@ class Search extends Component {
                                 </button>
                             </form>
                         </div>
-                    );
+                    )};
                 }}
             </Consumer>
         );
